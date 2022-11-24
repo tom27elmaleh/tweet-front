@@ -47,7 +47,11 @@ function Home() {
         {tweets}
       </div>  
       <div className={styles.trendsSection}>
-        TRENDS SECTION
+        <h3 style={{"color" : 'white'}}>TRENDS</h3>
+        <div className={styles.trends}>
+          <p className={styles.hashtag}>#hackatweet</p>
+          <p className={styles.nbTweets}>2 tweets</p>
+        </div>
       </div>
     </div>
   );
