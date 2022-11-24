@@ -1,22 +1,65 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+.container {
+    display: grid;
+    width: 100wh;
+    height: 100vh;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 3fr 2fr;
+    background-color: #151f2b;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+/* LEFT SECTION */
+.leftSection {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.userInfo{
+    display: flex;
+    align-items: center;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.userName {
+    color: white;
 }
+/* END LEFT SECTION */
+
+
+/* TOP SECTION */
+.topSection {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 1px solid red;
+}
+/* TOP SECTION */
+
+
+/* TWEET SECTION */
+.tweetSection {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 1px solid black;
+}
+/* TWEET SECTION */
+
+
+/* TRENDS SECTION */
+.trendsSection {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border: 1px solid green;
+}
+/* TRENDS SECTION */
+
