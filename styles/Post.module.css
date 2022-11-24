@@ -1,0 +1,33 @@
+.tweetButton {
+    background-color: #00acee;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.container {
+    color: white;
+    padding: 10px;
+}
+
+.textArea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(214, 214, 214, 0.201);
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.bottomSection {
+  color: white;
+  float: right;
+  margin-right: 10px;
+}

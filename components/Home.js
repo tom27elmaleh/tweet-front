@@ -1,7 +1,19 @@
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Post from './Post'
+import Tweet from './Tweet';
 
 function Home() {
+
+  const dataTweets = [{image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3}, 
+                      {image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3},
+                      {image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3},
+                      ]
+
+  const tweets = dataTweets.map((data, i) => {
+    return <Tweet key={i} {...data}></Tweet>
+  })
+
   return (
     <div className={styles.container}>
 
@@ -29,10 +41,10 @@ function Home() {
       </div>
 
       <div className={styles.topSection}>
-        TOP SECTION
+        <Post></Post>
       </div>
       <div className={styles.tweetSection}>
-        TWEET SECTION
+        {tweets}
       </div>  
       <div className={styles.trendsSection}>
         TRENDS SECTION
