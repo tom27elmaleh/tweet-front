@@ -6,6 +6,7 @@
     color: white;
     font-weight: bold;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .container {
@@ -30,4 +31,8 @@
   color: white;
   float: right;
   margin-right: 10px;
+}
+
+.tweetButton:hover {
+    background-color: #3e9af09b ;
 }
