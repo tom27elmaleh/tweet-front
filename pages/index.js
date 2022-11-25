@@ -1,9 +1,10 @@
-import Connection from '../components/Connection';
-import Home from '../components/Home';
 
+import Connection from '../components/Connection';
 
 function Index() {
-  return <Home />;
+
+    return <Connection></Connection>;
+  
 }
 
 export default Index;

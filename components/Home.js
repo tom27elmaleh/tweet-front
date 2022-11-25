@@ -4,16 +4,25 @@ import { useSelector } from 'react-redux';
 import styles from '../styles/Home.module.css';
 import Post from './Post'
 import Tweet from './Tweet';
+import { useRouter } from "next/router";
 
 function Home() {
 
-  const [dataTweets, setDataTweets] = useState([]);
-
+  const router = useRouter();
   const user = useSelector((state) => state.user.value);
+
+  const [dataTweets, setDataTweets] = useState([]);
+  
+  useEffect(() => {
+    if(user.token == null){
+      router.push('/index')
+    }
+    return;
+  }, [])
   
   useEffect(() => {
     
-    fetch(`http://localhost:3000/tweets/wR86HNHM8V8GiE4rWfDXB2jBAZiHnXL5`)
+    fetch(`http://localhost:3000/tweets/${user.token}`)
     .then(response => response.json())
     .then(data => {
       if(data){

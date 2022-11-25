@@ -31,8 +31,8 @@ function Modal({ closeModal }) {
         if (signupdata.result) {
             // signup successful
             console.log(signupdata);
-            seterrormessage("");  // reset error message to empty
-            router.push("/tweet");  // redirect to tweet page
+            seterrormessage("");  
+            router.push("/home"); 
         } else {
             // signup 
             console.log(signupdata);

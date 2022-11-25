@@ -13,6 +13,7 @@ function Modal({ closeModal }) {
     const [errormessage, seterrormessage] = useState("");
 
     const dispatch = useDispatch()
+    const router = useRouter()
 
 
     const signin = () => {
@@ -34,7 +35,7 @@ function Modal({ closeModal }) {
                     }));
 
                     seterrormessage("");
-                    console.log('connected'); // redirect to tweet page
+                   router.push('/home')
                 } else {
                     // failed to signin
 

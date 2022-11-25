@@ -1,13 +1,15 @@
-import React, { useState, useSelector } from 'react'
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import styles from '../styles/Post.module.css'
 
 function Post() {
 
-  // const user = useSelector((state) => state.user.value);
+  const user = useSelector((state) => state.user.value)
   const [tweet, setTweet] = useState();
 
+
   function handleTweet() {
-    fetch('http://localhost:3000/tweet/wR86HNHM8V8GiE4rWfDXB2jBAZiHnXL5', {
+    fetch(`http://localhost:3000/tweet/${user.token}`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ message: tweet}),
