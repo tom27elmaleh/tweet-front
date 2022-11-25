@@ -1,0 +1,10 @@
+.login{
+    width: 15vw;
+    height: 5vh;
+    margin-top: 2vh;
+    border: 2px  #111A20 solid;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #1161f5;
+    font-size: 16px;
+}

@@ -1,0 +1,71 @@
+img.modalLogo {
+    width: 40px;
+    transform: rotateZ(180deg);
+}
+
+.modalBackground {
+    position: fixed;
+    background-color: #040506;
+    z-index: 1000;
+    width: 350px;
+    height: 270px;
+    margin-top: 5%;
+    /* transform: translateY(50%); */
+    margin-left: 10%;
+    transform: translateX(95%);
+    border-radius: 10px;
+}
+
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 270px;
+    padding-top: 20px;
+}
+
+.username,
+.password {
+    width: 150px;
+    height: 25px;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid #FFF;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 5px 5px;
+}
+
+.btn_register {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn_register:hover {
+    background-color: #3f9af0;
+    color: #FFF;
+}
+
+.modaltitle {
+    color: #FFF;
+}
+
+.delete_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: rgb(255, 35, 35);
+}

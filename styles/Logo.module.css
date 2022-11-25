@@ -1,0 +1,9 @@
+.logo {
+    display: flex;
+    justify-content: flex-start;
+
+    height: 50px;
+    width: 50px;
+    transform: rotate(180deg);
+    margin-top: 5%;
+}
