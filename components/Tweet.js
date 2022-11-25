@@ -15,8 +15,8 @@ function Tweet(props) {
             <span className={styles.username}>@{props.username}</span>
             <span className={styles.date}>- {props.date}</span>
         </div>
-        <p>{props.text}</p>
-        <span>{props.like} like</span>
+        <p>{props.message}</p>
+        <span>{props.isLiked} like</span>
 
     </div>
   )

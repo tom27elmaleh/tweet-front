@@ -3,7 +3,7 @@ import Home from '../components/Home';
 
 
 function Index() {
-  return <Connection />;
+  return <Home />;
 }
 
 export default Index;

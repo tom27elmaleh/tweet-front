@@ -1,17 +1,29 @@
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import styles from '../styles/Home.module.css';
 import Post from './Post'
 import Tweet from './Tweet';
 
 function Home() {
 
-  const dataTweets = [{image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3}, 
-                      {image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3},
-                      {image: 'bird-logo-left-section.png', text: 'djelzjdklezjdlkez', firstname: 'John', username: 'johntest', like: 3},
-                      ]
+  const [dataTweets, setDataTweets] = useState([]);
+
+  const user = useSelector((state) => state.user.value);
+  
+  useEffect(() => {
+    
+    fetch(`http://localhost:3000/tweets/wR86HNHM8V8GiE4rWfDXB2jBAZiHnXL5`)
+    .then(response => response.json())
+    .then(data => {
+      if(data){
+        setDataTweets(data.tweets);
+      }
+    })
+  }, [])
 
   const tweets = dataTweets.map((data, i) => {
-    return <Tweet key={i} {...data}></Tweet>
+    return <Tweet key={i}  username={data.user.username} firstname={data.user.firstname} isLiked={data.isLiked} message={data.message} date={data.date}></Tweet>
   })
 
   return (
